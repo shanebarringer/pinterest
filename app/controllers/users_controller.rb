@@ -10,6 +10,14 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @boards = @user.boards
+
+    if @user.first_name == "shane"
+      @some_text = "Hello Shane"
+    else
+      @some_text = "You're not Shane... but you are just as good looking!"
+    end
+
   end
 
   # GET /users/new
@@ -69,6 +77,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :email)
+      params.require(:user).permit(:first_name, :email, :last_name)
     end
 end
