@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :boards
 	has_many :pins
-
+ 
 	def full_name
 		"#{first_name} #{last_name}"
 	end
