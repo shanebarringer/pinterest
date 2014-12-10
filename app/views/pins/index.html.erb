@@ -1,6 +1,8 @@
-<h1>Listing pins</h1>
+<h1>Pins</h1>
 
   <div id="columns">
+    <%= will_paginate @pins%>
+
      <% @pins.each do |pin| %>
         <div class="item-background">
           <div class="pin-image">

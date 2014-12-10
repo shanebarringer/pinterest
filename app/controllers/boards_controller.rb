@@ -71,4 +71,9 @@ class BoardsController < ApplicationController
     def board_params
       params.require(:board).permit(:name, :about, :user_id)
     end
+
+    def redirect
+       format.html { redirect_to '/users'}
+      
+    end
 end

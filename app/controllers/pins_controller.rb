@@ -15,7 +15,7 @@ class PinsController < ApplicationController
     if user_signed_in?
       @pins = current_user.pins
     else
-      @pins = Pin.all
+      @pins = Pin.paginate(page: params[:page], per_page: 5)
     end
   end
 
