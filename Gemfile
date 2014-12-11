@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'pry-rails', :group => :development
+
 gem 'will_paginate'
 
 gem 'devise'
